@@ -306,4 +306,426 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover; /* contain */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #1B2330;
+}
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v35-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v35-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/raleway-v28-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* raleway-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/raleway-v28-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.btn {
+  width: 28rem;
+  height: 5.6rem;
+  padding: 1.9rem 5.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(138.1deg, #63E1D9 -49.34%, #34A0CD 100%);
+  font-family: "Raleway";
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__container {
+  margin-top: 7.3rem;
+  margin-bottom: 9.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sitenav__list {
+  display: flex;
+  gap: 5.7rem;
+}
+
+.sitenav__item {
+  font-family: "Raleway";
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.sitenav__item a {
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .header__container margin {
+    top: 3rem;
+    bottom: 3rem;
+  }
+  .header__container .sitelogo__img {
+    width: 8rem;
+    height: 2.4rem;
+  }
+  .header__container .sitenav__list {
+    gap: 2.4rem;
+  }
+  .header__container .sitenav__list a {
+    font-size: 1.2rem;
+  }
+}
+.bg {
+  background-color: #0B1524;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rem;
+  margin-bottom: 1.6rem;
+  text-align: start;
+}
+.footer__item img {
+  margin-right: 0.4rem;
+}
+
+.footer__left__text {
+  width: 35rem;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 5rem;
+}
+
+.footer__center {
+  display: flex;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.lists {
+  display: flex;
+}
+
+.footer__items {
+  margin-right: 8rem;
+  margin-bottom: 1.6rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image {
+  margin-bottom: 3.6rem;
+}
+
+.hero__title {
+  width: 73rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+}
+
+.hero__desc {
+  width: 59rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+}
+
+.hero__lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15rem;
+}
+
+.hero__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero__list__title {
+  font-family: "Raleway";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 23px;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  text-align: center;
+}
+.hero__list__text {
+  width: 35rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hero__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 7rem;
+}
+
+.hero__img {
+  display: inline-block;
+}
+
+.stay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18rem;
+}
+
+.right__title {
+  width: 45rem;
+  font-family: "Raleway";
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.right__text {
+  width: 56rem;
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #FFF;
+  margin-bottom: 1.6rem;
+}
+
+.link {
+  display: flex;
+}
+
+.right__link {
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #62E0D9;
+  margin-right: 1rem;
+}
+
+.box__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__item {
+  width: 36rem;
+  background-color: #202A3C;
+  border-radius: 3.933px;
+  box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
+  margin-right: 4rem;
+  padding: 4rem 2.5rem;
+}
+.box__text {
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.box__bottom {
+  display: flex;
+}
+.box__bottom__title {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+.box__bottom__text {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.571px;
+}
+.box__bottom__desc {
+  flex-direction: column;
+}
+.box__bottom img {
+  margin-right: 1rem;
+}
+
+.access {
+  width: 86rem;
+  height: 28rem;
+  background-color: #1B2330;
+  padding: 0;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.access__title {
+  font-family: Raleway;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  margin-bottom: 1.6rem;
+}
+.access__text {
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 3.8rem;
+}
+
+.access__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 48rem;
+  height: 5rem;
+  background-color: #FFF;
+  border-radius: 2rem;
+  color: #C0C0C0;
+  font-size: 1.2rem;
+  padding: 1.6rem 20rem 1.6rem 3.8rem;
+  margin-right: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .hero__image img {
+    width: 30rem;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero__title {
+    width: 12rem;
+    font-size: 2.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */

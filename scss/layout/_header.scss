@@ -1,0 +1,51 @@
+.header__container {
+    margin-top: 7.3rem;
+    margin-bottom: 9.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitelogo {
+}
+.sitelogo__img {
+
+}
+.sitenav {
+    
+}
+.sitenav__list {
+    display: flex;
+    gap: 5.7rem;
+}
+.sitenav__item {
+    font-family: 'Raleway';
+    font-size: 1.6rem;
+    font-weight: 400;
+    a {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .header__container {
+        margin {
+            top: 3rem;
+            bottom: 3rem;
+        }
+
+        .sitelogo__img {
+            width: 8rem;
+            height: 2.4rem;
+        }
+        .sitenav__list {
+            gap: 2.4rem;
+
+            a {
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+    
+}
